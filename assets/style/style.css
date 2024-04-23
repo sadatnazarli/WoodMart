@@ -101,7 +101,7 @@ body {
     align-items: center;
     background: #fff;
     border: 1px solid #ccc;
-    border-radius: 2px;
+    
 }
 
 .search-input, .search-select {
@@ -109,6 +109,7 @@ body {
     padding: 10px;
     font-size: 1em;
     outline: none;
+    
 }
 .search-select {
     border-left: 1px solid #ccc;
@@ -116,7 +117,23 @@ body {
 .search-category-btn, .search-btn {
     padding: 5px 15px; 
 }
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>') no-repeat right 10px center;
+    background-size: 15px;
+    padding-right: 30px;
+    font-size: 1em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 2px;
+    margin-right: 10px;
 
+
+}
 
 
 .search-btn {
@@ -125,6 +142,10 @@ body {
     padding: 10px;
     border: none;
     cursor: pointer;
+    border-radius: 2px;
+    font-size: 1em;
+    outline: none;
+    
 }
 .menu-items a {
     color: #333;
@@ -162,14 +183,4 @@ body {
 
 .cart-total {
     font-weight: bold;
-}
-.badge {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    background-color: red;
-    color: white;
-    border-radius: 50%;
-    padding: 2px 6px;
-    font-size: 0.75em;
 }
