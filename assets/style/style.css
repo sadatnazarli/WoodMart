@@ -1,10 +1,29 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
 }
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f8f8f8;
+    padding: 10px 0;
+}
+
 .navbar {
     display: flex;
+    flex-wrap: wrap; 
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
+}
+.navbar-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
 }
 .navbar ul {
     list-style: none;
@@ -24,7 +43,7 @@ body {
 }
 .contact-info {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
     font-size: 0.9em;
 }
@@ -60,4 +79,97 @@ body {
 }
 .dropdown:hover .dropdown-content {
     display: block;
+}
+.branding-section {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; 
+    justify-content: space-evenly; 
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+.logo-container .navbar-logo {
+    width: auto; 
+    height: 30px; 
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.search-input, .search-select {
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    outline: none;
+}
+.search-select {
+    border-left: 1px solid #ccc;
+}
+.search-category-btn, .search-btn {
+    padding: 5px 15px; 
+}
+
+
+
+.search-btn {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+.menu-items a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9em;
+}
+
+.user-interaction-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.notification-icon, .shopping-bag-icon {
+    position: relative;
+}
+
+
+.user-interaction-icons .icon-link {
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.user-interaction-icons .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 0.75em;
+}
+
+.cart-total {
+    font-weight: bold;
+}
+.badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.75em;
 }
