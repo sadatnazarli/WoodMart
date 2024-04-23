@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    padding: 3px 7px;
+    font-size: 0.8em;
+}
+.navbar a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+.contact-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 0.9em;
+}
+.contact-info span, .contact-info a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8em;
+}
+.contact-info span i {
+    margin-right: 10px; 
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
