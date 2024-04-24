@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -90,6 +91,7 @@ html {
 .branding-section {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .logo-container {
@@ -104,26 +106,28 @@ html {
 
 .search-bar {
     display: flex;
-    flex-grow: 1;
+    flex-grow: 0.5; 
     align-items: center;
-    padding: 0 15px;
-    margin: 0 20px;
-    background-color: #f2f2f2;
-    border-radius: 4px;
+    padding: 0 10px;
+    margin: 0 15px;
+    border: 1px solid gray;
+    /* background-color: #f2f2f2; */
+    border-radius: 3px;
 }
 
 .search-input {
     flex-grow: 1;
     border: none;
     outline: none;
-    background-color: transparent;
+    /* background-color: transparent; */
     padding: 10px;
 }
 
 .search-select {
     border: none;
     outline: none;
-    background-color: transparent;
+    border: 1px solid gray;
+    /* background-color: transparent; */
     margin-left: 10px;
 }
 
@@ -184,8 +188,9 @@ select{
 
 .user-interaction-icons {
     display: flex;
+    justify-content: end;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
 }
 .notification-icon, .shopping-bag-icon {
     position: relative;
@@ -236,14 +241,26 @@ select{
     }
 }
 .hero-section {
+
     margin-top: 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     background: url('./images/wood-food-market-slider-bg-3-opt.jpg') no-repeat center center/cover;
     color: white;
-    padding: 50px 20px;
+    padding:100px 10px;
     text-align: left;
+  }
+
+
+  .hero-text1{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+
+    a{
+        width: 100px;
+    }
   }
 .hero-content {
     font-size: 2.5em; 
@@ -281,27 +298,178 @@ select{
     border: none; 
     cursor: pointer;
   }
-  .icon-features {
+  .help-section {
+    background-color: #fff;
+    color: #333;
+    padding: 50px 0;
+    text-align: center;
+    
+  }
+  
+
+  .container {
+    background-color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: -100px;
+    z-index: 99;
+
+  }
+  
+  .section-title {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+  }
+  
+  .service-boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: white;
+  }
+  
+  .service-box {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px; 
+    color: #333;
+    transition: transform 0.3s ease;
+  }
+  
+  .divider {
+    height: 2px; 
+    background-color: black;
+    margin: 0 10px; 
+  }
+  
+  .service-box i {
+    font-size: 4rem; 
+    margin-bottom: 15px; 
+    color: gray; 
     display: flex;
     justify-content: center;
-    text-align: left;
   }
-
-  .feature {
-    flex: 1;
-    padding: 10px;
+  .service-icon {
+    font-size: 3rem;
+    color: #e74c3c; 
+    margin-bottom: 20px;
   }
-
-  .feature-icon {
-    font-size: 2em;
+  
+  .service-box h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333; 
   }
-
-  .feature h3 {
-    font-size: 1.25em;
-    color: #333;
-  }
-
-  .feature p {
+  
+  .service-box p {
     font-size: 1rem;
-    color: #666;
+    color: #666; 
+    display: flex;
+    justify-content: center;
   }
+  
+  @media (max-width: 960px) {
+    .service-boxes {
+      flex-direction: column;
+    }
+    
+    .service-box {
+      margin-bottom: 20px;
+    }
+     .divider {
+    display: none; /* Hide the divider on smaller screens */
+  }
+  }
+  .second{
+    text-align: center;
+    margin-top: 70px;
+    h1{
+      font-size: xx-large;
+    }
+   
+  }
+
+  .product-section {
+    padding: 40px 0;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Adjust title color as needed */
+  }
+  
+  .tab-nav {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .tab-nav button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background: none;
+    border: 1px solid #ccc; /* Adjust border color as needed */
+    cursor: pointer;
+  }
+  
+  .products-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  }
+  
+  .product-item {
+    width: 200px; /* Adjust width as needed */
+    text-align: center;
+    margin: 15px;
+    padding: 20px;
+    background: #fff; /* Adjust item background color as needed */
+    border: 1px solid #ddd; /* Adjust border color as needed */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .product-details h3 {
+    color: #333; /* Adjust title color as needed */
+    margin-bottom: 5px;
+  }
+  
+  .category {
+    color: #777; /* Adjust category color as needed */
+    font-size: 0.9em;
+    margin-bottom: 5px;
+  }
+  
+  .price {
+    color: #e74c3c; /* Adjust price color as needed */
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .add-to-cart-btn {
+    padding: 10px 20px;
+    background: #e74c3c; /* Adjust button color as needed */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-to-cart-btn:hover {
+    background: #c0392b; /* Darken button on hover */
+  }
+  
