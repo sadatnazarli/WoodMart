@@ -2,6 +2,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
 }
+html {
+    font-size: 16px; 
+  }
 .header {
     display: flex;
     flex-direction: column;
@@ -11,11 +14,15 @@ body {
 }
 
 .navbar {
+    background-color: #fff;
     display: flex;
-    flex-wrap: wrap; 
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+}
+.navbar-logo {
+    height: auto;
+    width: 150px;
 }
 .navbar-container {
     width: 100%;
@@ -83,13 +90,12 @@ body {
 .branding-section {
     display: flex;
     align-items: center;
-    flex-grow: 1; 
-    justify-content: space-evenly; 
 }
 
 .logo-container {
     display: flex;
     align-items: center;
+    flex: none;
 }
 .logo-container .navbar-logo {
     width: auto; 
@@ -98,10 +104,27 @@ body {
 
 .search-bar {
     display: flex;
+    flex-grow: 1;
     align-items: center;
-    background: #fff;
-    border: 1px solid #ccc;
-    
+    padding: 0 15px;
+    margin: 0 20px;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+}
+
+.search-input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.search-select {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-left: 10px;
 }
 
 .search-input, .search-select {
@@ -109,7 +132,7 @@ body {
     padding: 10px;
     font-size: 1em;
     outline: none;
-    
+    height: 40px;
 }
 .search-select {
     border-left: 1px solid #ccc;
@@ -121,7 +144,6 @@ select{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>') no-repeat right 10px center;
     background-size: 15px;
     padding-right: 30px;
     font-size: 1em;
@@ -131,21 +153,27 @@ select{
     padding: 10px;
     border-radius: 2px;
     margin-right: 10px;
-
-
 }
 
-
-.search-btn {
-    background: #333;
+.badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff0000;
     color: #fff;
-    padding: 10px;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 0.7em;
+    line-height: 1;
+    min-width: 20px;
+    text-align: center;
+}
+.search-btn {
+    background: transparent;
     border: none;
-    cursor: pointer;
-    border-radius: 2px;
-    font-size: 1em;
     outline: none;
-    
+    padding: 10px;
+    cursor: pointer;
 }
 .menu-items a {
     color: #333;
@@ -183,4 +211,97 @@ select{
 
 .cart-total {
     font-weight: bold;
+    font-size: 1em;
+    margin-left: 10px;
 }
+
+@media (min-width: 992px) {
+    .navbar {
+        flex-wrap: nowrap;
+    }
+}
+
+@media (max-width: 991px) {
+    .search-bar {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .user-interaction-icons {
+        margin-top: 10px;
+    }
+}
+.hero-section {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url('./images/wood-food-market-slider-bg-3-opt.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 50px 20px;
+    text-align: left;
+  }
+.hero-content {
+    font-size: 2.5em; 
+    margin-bottom: 0.5em;
+}
+.hero-image {
+    flex-basis: 50%; 
+    text-align: right; 
+}
+.hero-image img {
+    max-width: 100%; 
+    height: auto; 
+}
+  
+.hero-section h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .hero-content {
+    max-width: 50%;
+  }
+  .hero-section p {
+    font-size: 1rem; 
+    margin-bottom: 1rem;
+  }
+
+  .hero-section .button {
+    font-size: 1rem; 
+    padding: 0.625rem 1.25rem; 
+    background: green;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 2rem; 
+    border: none; 
+    cursor: pointer;
+  }
+  .icon-features {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .feature {
+    flex: 1;
+    padding: 10px;
+  }
+
+  .feature-icon {
+    font-size: 2em;
+  }
+
+  .feature h3 {
+    font-size: 1.25em;
+    color: #333;
+  }
+
+  .feature p {
+    font-size: 1rem;
+    color: #666;
+  }
