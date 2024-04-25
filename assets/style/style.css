@@ -672,76 +672,96 @@ select{
     transform: scale(1.1); 
   }
   footer {
-    background-color:#373839;
-    color: #fff;
-    padding: 50px 0;
-  }
-  
-  .footer-row {
+    background-color: #373839;
+    color: #ccc;
+    padding: 60px 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.container-footer {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-  }
-  
-  .footer-column {
-    width: calc(25% - 20px);
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 15px;
+    min-width: 200px;
     margin-bottom: 30px;
-  }
-  
-  .footer-column h4 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .footer-column ul {
+}
+
+.footer-column h4 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.footer-column ul,
+.footer-column p,
+.footer-bottom p {
     list-style: none;
     padding: 0;
-  }
-  
-  .footer-column li {
+    margin: 0;
+}
+
+.footer-column li {
     margin-bottom: 5px;
-  }
-  
-  .footer-column a {
+}
+
+.footer-column a {
     color: #fff;
     text-decoration: none;
-  }
-  
-  .footer-bottom {
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #bbbbbb;
+}
+
+.footer-logo {
+    color: white;
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 30px;
-  }
-  
-  .footer-bottom p {
-    font-size: 14px;
-    margin: 0;
-  }
-  
-  .payment-methods {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .payment-methods li {
-    margin: 0 5px;
-  }
-  
-  .payment-methods img {
+    flex-wrap: wrap;
+    border-top: 1px solid #4a4a4a;
+    padding-top: 20px;
+}
+
+.payment-methods img {
     height: 30px;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .footer-column {
-      width: calc(50% - 20px);
+        width: 50%;
+        min-width: auto;
     }
-  }
-  
-  @media (max-width: 500px) {
+}
+
+@media (max-width: 500px) {
+    .container-footer {
+        padding: 0;
+    }
+
     .footer-column {
-      width: 100%;
+        width: 100%;
+        padding: 0;
     }
-  }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
